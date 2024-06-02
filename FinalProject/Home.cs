@@ -12,13 +12,13 @@
         {
             try
             {
-                Form1.membersPage.Show();
+                Gym.membersPage.Show();
             } catch (Exception ex) { 
-                Form1.membersPage = new Members();
-                Form1.membersPage.Show();
+                Gym.membersPage = new Members();
+                Gym.membersPage.Show();
             }
-            Form1.membersPage.TopMost = true;
-            Form1.membersPage.TopMost = false;
+            Gym.membersPage.TopMost = true;
+            Gym.membersPage.TopMost = false;
         }
 
         // Log Out
@@ -32,16 +32,16 @@
         {
             try
             {
-                Form1.addMemberPage.Show();
+                Gym.addMemberPage.Show();
             }
             catch (Exception ex)
             {
-                Form1.addMemberPage = new AddMember();
-                Form1.addMemberPage.Show();
+                Gym.addMemberPage = new AddMember();
+                Gym.addMemberPage.Show();
             }
 
-            Form1.addMemberPage.TopMost = true;
-            Form1.addMemberPage.TopMost = false;
+            Gym.addMemberPage.TopMost = true;
+            Gym.addMemberPage.TopMost = false;
         }
 
     }

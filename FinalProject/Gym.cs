@@ -1,14 +1,11 @@
 using FinalProject.Models;
-using Microsoft.VisualBasic.Logging;
 using System.Collections;
-using System.Data.SqlClient;
-using System.Text;
 
 namespace FinalProject
 {
-    public partial class Form1 : Form
+    public partial class Gym : Form
     {
-        public Form1()
+        public Gym()
         {
             InitializeComponent();
             InitialUser();
@@ -29,7 +26,7 @@ namespace FinalProject
                 string hashedPassword = DBHandler.HashPassword("admin");
 
                 string query = $"INSERT INTO Admin (password) VALUES ('{hashedPassword}')";
-             
+
                 DBHandler.ExecuteNonQuery(query);
             }
         }
@@ -46,14 +43,18 @@ namespace FinalProject
                 try
                 {
                     home.Show();
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     home = new Home();
                     home.Show();
                 }
                 home.TopMost = true;
                 home.TopMost = false;
-            } else
+
+                textBox1.Text = "";
+            }
+            else
             {
                 MessageBox.Show("Wrong Password!");
             }

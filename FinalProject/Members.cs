@@ -49,10 +49,10 @@ namespace FinalProject
             {
                 if (member.id == id)
                 {
-                    Form1.editMemberPage = new AddMember(member);
-                    Form1.editMemberPage.Show();
-                    Form1.editMemberPage.TopMost = true;
-                    Form1.editMemberPage.TopMost = false;
+                    Gym.editMemberPage = new AddMember(member);
+                    Gym.editMemberPage.Show();
+                    Gym.editMemberPage.TopMost = true;
+                    Gym.editMemberPage.TopMost = false;
                     break;
                 }
             }

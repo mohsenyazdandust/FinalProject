@@ -1,6 +1,6 @@
 ﻿namespace FinalProject
 {
-    partial class Form1
+    partial class Gym
     {
         /// <summary>
         ///  Required designer variable.
@@ -78,8 +78,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Gym";
+            this.Text = "Gym";
             this.ResumeLayout(false);
             this.PerformLayout();
 
