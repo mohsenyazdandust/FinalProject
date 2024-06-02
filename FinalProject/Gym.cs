@@ -59,5 +59,10 @@ namespace FinalProject
                 MessageBox.Show("Wrong Password!");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Try \"admin\" :)");
+        }
     }
 }

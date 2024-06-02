@@ -59,6 +59,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Forgot Password";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -69,7 +70,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter Password";
             // 
-            // Form1
+            // Gym
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -79,6 +79,7 @@
             this.textBox1.PlaceholderText = "Search by Name or Phone";
             this.textBox1.Size = new System.Drawing.Size(208, 23);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.search);
             // 
             // button1
             // 
@@ -88,7 +89,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Find!";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.search);
             // 
             // Members
             // 

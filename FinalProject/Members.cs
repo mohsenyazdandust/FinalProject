@@ -58,7 +58,7 @@ namespace FinalProject
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void search(object sender, EventArgs e)
         {
             string s = textBox1.Text.ToString().Trim();
             searched = new ArrayList();
@@ -71,7 +71,7 @@ namespace FinalProject
             {
                 foreach (MemberModel member in members)
                 {
-                    if (member.name.Contains(s) || member.phone.Contains(s)) 
+                    if (member.name.Contains(s) || member.phone.Contains(s))
                     {
                         searched.Add(member);
                     }
@@ -79,5 +79,6 @@ namespace FinalProject
                 this.FillTable(searched);
             }
         }
+
     }
 }
