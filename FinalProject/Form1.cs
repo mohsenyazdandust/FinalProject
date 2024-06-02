@@ -12,7 +12,6 @@ namespace FinalProject
         {
             InitializeComponent();
             InitialUser();
-
         }
 
 
@@ -44,7 +43,7 @@ namespace FinalProject
                 home.Show();
                 home.TopMost = true;
                 home.TopMost = false;
-                this.Hide();
+                // this.Hide();
             } else
             {
                 MessageBox.Show("Wrong Password!");

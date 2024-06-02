@@ -17,15 +17,26 @@ namespace FinalProject
             InitializeComponent();
         }
 
+        AddMember addMember = new AddMember();
+        Members members = new Members();
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            members.Show();
+            members.TopMost = true;
         }
 
         // Log Out
         private void button3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        // Add Member
+        private void button2_Click(object sender, EventArgs e)
+        {
+            addMember.Show();
+            addMember.TopMost = true;
         }
     }
 }

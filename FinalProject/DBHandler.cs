@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FinalProject
 {
@@ -97,5 +98,39 @@ namespace FinalProject
 
             return Convert.ToBase64String(byteHash);
         }
+
+        public static ArrayList GetMembers()
+        {
+            ArrayList members = new ArrayList();
+
+            try
+            {
+                SqlConnection conn = new SqlConnection(connectionQuery);
+                conn.Open();
+
+                string query = "SELECT * FROM Member";
+
+                SqlCommand command = new SqlCommand(query, conn);
+                var reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    members.Add(new MemberModel(
+                        reader["id"].ToString(),
+                        reader["fullname"].ToString(),
+                        reader["registered_at"].ToString(),
+                        reader["phone"].ToString(),
+                        reader["paid"].ToString()
+                    ));
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex) { }
+
+            return members;
+        }
+
     }
 }
