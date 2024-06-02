@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace FinalProject
+﻿namespace FinalProject
 {
     public partial class Home : Form
     {
@@ -17,26 +7,42 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        AddMember addMember = new AddMember();
-        Members members = new Members();
-
+        // Members
         private void button1_Click(object sender, EventArgs e)
         {
-            members.Show();
-            members.TopMost = true;
+            try
+            {
+                Form1.membersPage.Show();
+            } catch (Exception ex) { 
+                Form1.membersPage = new Members();
+                Form1.membersPage.Show();
+            }
+            Form1.membersPage.TopMost = true;
+            Form1.membersPage.TopMost = false;
         }
 
         // Log Out
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         // Add Member
         private void button2_Click(object sender, EventArgs e)
         {
-            addMember.Show();
-            addMember.TopMost = true;
+            try
+            {
+                Form1.addMemberPage.Show();
+            }
+            catch (Exception ex)
+            {
+                Form1.addMemberPage = new AddMember();
+                Form1.addMemberPage.Show();
+            }
+
+            Form1.addMemberPage.TopMost = true;
+            Form1.addMemberPage.TopMost = false;
         }
+
     }
 }

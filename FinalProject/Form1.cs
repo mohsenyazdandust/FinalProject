@@ -15,7 +15,10 @@ namespace FinalProject
         }
 
 
-        Home home = new Home();
+        public static Home home = new Home();
+        public static Members membersPage = new Members();
+        public static AddMember addMemberPage = new AddMember();
+        public static AddMember editMemberPage = new AddMember();
 
         private void InitialUser()
         {
@@ -40,10 +43,16 @@ namespace FinalProject
 
             if (admin != null)
             {
-                home.Show();
+                try
+                {
+                    home.Show();
+                } catch (Exception ex)
+                {
+                    home = new Home();
+                    home.Show();
+                }
                 home.TopMost = true;
                 home.TopMost = false;
-                // this.Hide();
             } else
             {
                 MessageBox.Show("Wrong Password!");
