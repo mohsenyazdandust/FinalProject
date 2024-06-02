@@ -1,1 +1,3 @@
 # FinalProject
+It's Just a Simple Windows Form Application for Managing a Gym...
+It's Gonna be a Long Way, I'm Just Getting Warmed Up!
