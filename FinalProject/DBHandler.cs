@@ -1,14 +1,8 @@
 ﻿using FinalProject.Models;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FinalProject
 {
@@ -121,7 +115,8 @@ namespace FinalProject
                         reader["fullname"].ToString(),
                         reader["registered_at"].ToString(),
                         reader["phone"].ToString(),
-                        reader["paid"].ToString()
+                        reader["paid"].ToString(),
+                        reader["age"].ToString()
                     ));
                 }
 

@@ -37,6 +37,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -125,11 +126,21 @@
             0,
             0});
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 15);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Add New Member";
+            // 
             // AddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDown1);
@@ -141,7 +152,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "AddMember";
             this.Text = "AddMember";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddMember_FormClosed);
             this.Load += new System.EventHandler(this.AddMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -161,5 +171,6 @@
         private NumericUpDown numericUpDown1;
         private Button button1;
         private NumericUpDown numericUpDown2;
+        private Label label5;
     }
 }
